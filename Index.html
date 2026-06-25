@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🏆 Central da Copa 🇧🇷</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<div class="alerta-ao-vivo" id="alertaAoVivo">🔴 JOGO AO VIVO AGORA!</div>
+
+<div class="cabecalho">
+    <h1>🏆 CENTRAL DA COPA 🇧🇷</h1>
+    <p>Horários e Transmissões - Bahia e todo Brasil</p>
+</div>
+
+<div class="relogios">
+    <div class="fuso">
+        <h3>UTC -2</h3>
+        <p>Fernando de Noronha</p>
+        <p id="h2">--:--</p>
+    </div>
+    <div class="fuso">
+        <h3>UTC -3</h3>
+        <p>Brasília / Bahia / Nordeste</p>
+        <p id="h3">--:--</p>
+    </div>
+    <div class="fuso">
+        <h3>UTC -4</h3>
+        <p>Amazonas / MT / MS</p>
+        <p id="h4">--:--</p>
+    </div>
+    <div class="fuso">
+        <h3>UTC -5</h3>
+        <p>Acre / Oeste AM</p>
+        <p id="h5">--:--</p>
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="card" style="margin-bottom:20px;">
+        <h3>🌍 SELEÇÕES (48 SELEÇÕES COPA 2026)</h3>
+        <div id="areaUsuario" style="margin:10px 0; padding:10px; background:#2a2a2a; border-radius:6px;">
+            <p>Digite seu nome para entrar:</p>
+            <input type="text" id="campoNomeUsuario" placeholder="Seu nome" maxlength="20">
+            <button class="botao" onclick="entrarSite()">ENTRAR</button>
+        </div>
+
+        <div class="selecoes" id="listaSelecoes" style="display:none;">
+            <span class="selecao ativa">🇧🇷 Brasil</span>
+            <span class="selecao ativa">🇦🇷 Argentina</span>
+            <span class="selecao ativa">🇺🇾 Uruguai</span>
+            <span class="selecao ativa">🇨🇴 Colômbia</span>
+            <span class="selecao ativa">🇪🇨 Equador</span>
+            <span class="selecao ativa">🇻🇪 Venezuela</span>
+            <span class="selecao ativa">🇵🇾 Paraguai</span>
+            <span class="selecao ativa">🇧🇴 Bolívia</span>
+            <span class="selecao ativa">🇫🇷 França</span>
+            <span class="selecao ativa">🏴󠁧󠁢󠁥󠁮󠁧󠁿 Inglaterra</span>
+            <span class="selecao ativa">🇧🇪 Bélgica</span>
+            <span class="selecao ativa">🇳🇱 Holanda</span>
+            <span class="selecao ativa">🇵🇹 Portugal</span>
+            <span class="selecao ativa">🇩🇪 Alemanha</span>
+            <span class="selecao ativa">🇪🇸 Espanha</span>
+            <span class="selecao ativa">🇭🇷 Croácia</span>
+            <span class="selecao ativa">🇷🇸 Sérvia</span>
+            <span class="selecao ativa">🇨🇭 Suíça</span>
+            <span class="selecao ativa">🇩🇰 Dinamarca</span>
+            <span class="selecao ativa">🇸🇪 Suécia</span>
+            <span class="selecao ativa">🇵🇱 Polônia</span>
+            <span class="selecao ativa">🇦🇹 Áustria</span>
+            <span class="selecao ativa">🏴󠁧󠁢󠁳󠁣󠁴󠁿 Escócia</span>
+            <span class="selecao ativa">🇭🇺 Hungria</span>
+            <span class="selecao ativa">🇺🇸 EUA</span>
+            <span class="selecao ativa">🇲🇽 México</span>
+            <span class="selecao ativa">🇨🇦 Canadá</span>
+            <span class="selecao ativa">🇨🇷 Costa Rica</span>
+            <span class="selecao ativa">🇵🇦 Panamá</span>
+            <span class="selecao ativa">🇭🇳 Honduras</span>
+            <span class="selecao ativa">🇬🇹 Guatemala</span>
+            <span class="selecao ativa">🇨🇺 Cuba</span>
+            <span class="selecao ativa">🇸🇳 Senegal</span>
+            <span class="selecao ativa">🇲🇦 Marrocos</span>
+            <span class="selecao ativa">🇳🇬 Nigéria</span>
+            <span class="selecao ativa">🇹🇳 Tunísia</span>
+            <span class="selecao ativa">🇨🇲 Camarões</span>
+            <span class="selecao ativa">🇬🇭 Gana</span>
+            <span class="selecao ativa">🇨🇮 Costa do Marfim</span>
+            <span class="selecao ativa">🇬🇦 Gabão</span>
+            <span class="selecao ativa">🇯🇵 Japão</span>
+            <span class="selecao ativa">🇰🇷 Coreia do Sul</span>
+            <span class="selecao ativa">🇦🇺 Austrália</span>
+            <span class="selecao ativa">🇶🇦 Catar</span>
+            <span class="selecao ativa">🇮🇷 Irã</span>
+            <span class="selecao ativa">🇸🇦 Arábia Saudita</span>
+            <span class="selecao ativa">🇹🇭 Tailândia</span>
+            <span class="selecao ativa">🇻🇳 Vietnã</span>
+        </div>
+        <p style="font-size:12px; margin-top:5px;">✅ Clica para apoiar | ❌ Você remove quando forem eliminadas</p>
+    </div>
+
+    <!-- JOGO 1 -->
+    <div class="jogo-card">
+        <div class="jogo-titulo" onclick="toggleJogo('jogo1')">
+            🟡 BRASIL x ESTADOS UNIDOS | Estádio Nacional | 18/07 | 10:00 (UTC-3)
+        </div>
+        <div class="jogo-conteudo" id="jogo1">
+            <div class="player" id="playerJ1">🎥 Cole link YouTube / Premiere / ESPN e clique em Atualizar</div>
+            <input type="text" id="linkJ1" placeholder="Cole aqui o link da transmissão">
+            <button class="botao" onclick="atualizarPlayer('jogo1')">Atualizar Player</button>
+
+            <div class="linha">
+                <div>
+                    <h4>💬 Chat de Texto</h4>
+                    <div class="chat-box" id="chatJ1"></div>
+                    <input type="text" id="nomeJ1" placeholder="Seu nome" value="Visitante">
+                    <input type="text" id="msgJ1" placeholder="Escreva mensagem..." style="width:75%; display:inline-block;">
+                    <button class="botao" onclick="enviarMsg('jogo1')">Enviar</button>
+                </div>
+                <div>
+                    <h4>🗣️ Sala de Voz</h4>
+                    <a href="https://meet.jit.si/central-copa-jogo1" target="_blank" class="botao">🎙️ ENTRAR SALA</a>
+
+                    <div class="admin-area" id="adminJ1">
+                        <h4>🛠️ PAINEL ADMIN</h4>
+                        <button class="botao botao-admin" onclick="mutaTodos('jogo1')">🔇 MUTAR TODOS</button>
+                        <button class="botao botao-admin" onclick="limparChat('jogo1')">🗑️ LIMPAR CHAT</button>
+                        <input type="text" id="userMutarJ1" placeholder="Nome para mutar" style="width:70%;">
+                        <button class="botao botao-admin" onclick="mutaUsuario('jogo1')">🚫 MUTAR</button>
+                    </div>
+                    <button class="botao botao-admin" onclick="mostrarAdmin('jogo1')">ABRIR PAINEL</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JOGO 2 -->
+    <div class="jogo-card">
+        <div class="jogo-titulo" onclick="toggleJogo('jogo2')">
+            🟢 ARGENTINA x MÉXICO | Arena Principal | 19/07 | 13:00 (UTC-3)
+        </div>
+        <div class="jogo-conteudo" id="jogo2">
+            <div class="player" id="playerJ2">🎥 Cole link e clique em Atualizar</div>
+            <input type="text" id="linkJ2" placeholder="Cole aqui o link da transmissão">
+            <button class="botao" onclick="atualizarPlayer('jogo2')">Atualizar Player</button>
+
+            <div class="linha">
+                <div>
+                    <h4>💬 Chat de Texto</h4>
+                    <div class="chat-box" id="chatJ2"></div>
+                    <input type="text" id="nomeJ2" placeholder="Seu nome" value="Visitante">
+                    <input type="text" id="msgJ2" placeholder="Escreva mensagem..." style="width:75%; display:inline-block;">
+                    <button class="botao" onclick="enviarMsg('jogo2')">Enviar</button>
+                </div>
+                <div>
+                    <h4>🗣️ Sala de Voz</h4>
+                    <a href="https://meet.jit.si/central-copa-jogo2" target="_blank" class="botao">🎙️ ENTRAR SALA</a>
+
+                    <div class="admin-area" id="adminJ2">
+                        <h4>🛠️ PAINEL ADMIN</h4>
+                        <button class="botao botao-admin" onclick="mutaTodos('jogo2')">🔇 MUTAR TODOS</button>
+                        <button class="botao botao-admin" onclick="limparChat('jogo2')">🗑️ LIMPAR CHAT</button>
+                        <input type="text" id="userMutarJ2" placeholder="Nome para mutar" style="width:70%;">
+                        <button class="botao botao-admin" onclick="mutaUsuario('jogo2')">🚫 MUTAR</button>
+                    </div>
+                    <button class="botao botao-admin" onclick="mostrarAdmin('jogo2')">ABRIR PAINEL</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JOGO 3 -->
+    <div class="jogo-card">
+        <div class="jogo-titulo" onclick="toggleJogo('jogo3')">
+            🔵 FINAL DA COPA | Vencedor 1 x Vencedor 2 | Maracanã | 30/07 | 17:00 (UTC-3)
+        </div>
+        <div class="jogo-conteudo" id="jogo3">
+            <div class="player" id="playerJ3">🎥 Cole link e clique em Atualizar</div>
+            <input type="text" id="linkJ3" placeholder="Cole aqui o link da transmissão">
+            <button class="botao" onclick="atualizarPlayer('jogo3')">Atualizar Player</button>
+
+            <div class="linha">
+                <div>
+                    <h4>💬 Chat de Texto</h4>
+                    <div class="chat-box" id="chatJ3"></div>
+                    <input type="text" id="nomeJ3" placeholder="Seu nome" value="Visitante">
+                    <input type="text" id="msgJ3" placeholder="Escreva mensagem..." style="width:75%; display:inline-block;">
+                    <button class="botao" onclick="enviarMsg('jogo3')">Enviar</button>
+                </div>
+                <div>
+                    <h4>🗣️ Sala de Voz</h4>
+                    <a href="https://meet.jit.si/central-copa-jogo3" target="_blank" class="botao">🎙️ ENTRAR SALA</a>
+
+                    <div class="admin-area" id="adminJ3">
+                        <h4>🛠️ PAINEL ADMIN</h4>
+                        <button class="botao botao-admin" onclick="mutaTodos('jogo3')">🔇 MUTAR TODOS</button>
+                        <button class="botao botao-admin" onclick="limparChat('jogo3')">🗑️ LIMPAR CHAT</button>
+                    </div>
+                    <button class="botao botao-admin" onclick="mostrarAdmin('jogo3')">ABRIR PAINEL</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
